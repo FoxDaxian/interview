@@ -1,0 +1,953 @@
+/*全局样式设定*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+	font-family: sans-serif;
+	color: #666666;
+}
+img{
+	border: none;
+}
+ul,li,ol{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.clear{
+	clear: both;
+}
+/*头部logo样式设计部分*/
+#header{
+	width: 100%;
+	height:120px;
+	background: #000;
+}
+.header{
+	width: 1170px;
+	height: 120px;
+	margin: 0 auto;
+}
+.logo_left{
+	width: 367px;
+	height: 120px;
+	float: left;
+}
+.logo_left a{
+	line-height: 0px;
+}
+.logo_right{
+	width: 404px;
+	height: 46px;
+	margin-top: 37px;
+	float: right;
+}
+.logo_right_ul li a{
+	display: block;
+	float: left;
+	border-right: 1px solid white;
+	font-size: 15px;
+	padding: 0px 10px;
+	font-family: "微软雅黑";
+	color: white;
+	text-align: center;
+	opacity: 0.7;
+}
+.logo_right_ul li a:hover{
+	opacity: 1.0;
+}
+/*导航栏部分样式*/
+#menu{
+	width: 100%;
+	height: 29px;
+	background: #000;
+}
+.menu{
+	width: 1170px;
+	height: 29px;
+	margin: 0 auto;
+}
+nav{
+	height: 58px;
+	line-height: 58px;
+	background: #39A4DC;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0 35px #fff;
+	border-radius: 10px;
+}
+nav ul li{
+	width: 146.25px;
+	height: 58px;
+	float: left;
+	line-height: 58px;
+	text-align: center;	
+}
+nav ul li a{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+}
+nav ul li:hover{
+	opacity:0.8;
+}
+.first{
+	border-radius: 10px 0 0 10px;
+}
+.last{
+	border-radius: 0 10px 10px 0;
+}
+nav .hid li{
+	border: none;
+	background: #4E4E4E;
+}
+nav .hid li:hover{
+	background: rgba(10,5,5,0.6);
+}
+nav .hid1{
+	height: 0px;
+	overflow: hidden;
+	transition:.5s;
+}
+nav ul li:hover .hid1{
+	height: 236px;
+}
+nav .hid2{
+	display: none;
+}
+.color1{
+	background: #5bb2fc;
+}
+.color2{
+	background:#ffa659;
+}
+.color3{
+	background: #B881CF;
+	}
+.color4{
+	background: #fec63f;
+}
+.color5{
+	background:#58ebd3;
+}
+.color6{
+	background:#ff7a85;
+}
+.hid a{
+	font-size: 12px;
+}
+/*主体第一部分幻灯片盒子*/ 
+.slideBox{
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	top: -29px;
+}
+.slideBox #focus{
+	position: relative;
+	height: 100%;
+	z-index: 0;
+}
+.slideBox #focus li{
+	float: left;
+	width:100%;
+	height:600px; 
+}
+#focus .btn{
+	position:absolute;
+	width:710px;
+	height:95px;
+	padding:5px 10px;
+	right:0;
+	bottom:0;
+	text-align:right;
+	cursor: pointer;
+}
+#focus .btn span{
+	display:inline-block;
+	width:25px;
+	height:10px;
+	margin-left:5px;
+	background:#fff;
+	opacity: 0.4;
+}
+
+/*计科联盟社区样式部分*/
+#shequ{
+	width: 1170px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: -29px;
+}
+.ititle{
+	font-size: 32px;
+	width: 1170px;
+	height: 120px;
+	letter-spacing: 3px;
+	line-height: 100px;
+	text-align: center;
+	color: #CC3300;
+	background:url(../images/line.png) no-repeat 515px 80px;
+}
+.shequ{
+	width: 1170px;
+	height: 180px;
+}
+a.shequ1{
+	width: 390px;
+	height: 180px;
+	float: left;
+	background: #1A95BE;
+	color: #fff;
+}
+a.shequ2{
+	width: 390px;
+	height: 180px;
+	float: left;
+	background: #F6B939;
+	color: #fff;
+}
+a.shequ3{
+	width: 390px;
+	height: 180px;
+	float: left;
+	background: #FF7A85;
+	color: #fff;
+}
+.shequimg{
+	width: 114px;
+	height: 180px;
+	float: left;
+}
+.shequimg img{
+	margin: 30px 0 0 50px;
+}
+.shequp{
+	width: 230px;
+	float: left;
+	padding:30px 30px 0 8px;
+}
+p.shequp1{
+	font-size: 18px;
+	font-weight: bold;
+}
+p.shequp2{
+	line-height: 20px;
+	margin-top: 10px;
+}
+
+/*新闻资讯与技术分享样式部分*/
+#news{
+	width: 1170px;
+	margin: 0 auto;
+	height: 380px;
+	margin-top: 20px;
+}
+.news{
+	width: 575px;
+	float: left;
+	height: 380px;
+}
+.jishu{
+	width: 575px;
+	float: right;
+	height: 380px;
+}
+.ititle2{
+	width: 575px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #FA8334;
+	border-bottom: 1px solid #CCCCCC;
+}
+.ititle2 p{
+	width: 200px;
+	height: 40px;
+	border-bottom: 1px solid #FA8334;
+}
+/*社区图片划过效果*/
+.btn01 {
+    width: 282px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.btn01 img {
+    width: 282px;
+    height: 140px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.btn01 .ovrly {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn01 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.btn01 .buttons .fa {
+    background: rgb(256, 256, 256);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    color: rgba(50, 50, 50, 0.9);
+}
+.btn01 .buttons .fa-link {
+    -webkit-transform-origin: 165% 50%;
+    -moz-transform-origin: 165% 50%;
+    -ms-transform-origin: 165% 50%;
+    -o-transform-origin: 165% 50%;
+    transform-origin: 165% 50%;
+    -webkit-transform: rotateZ(0deg) scale(0);
+    -moz-transform: rotateZ(0deg) scale(0);
+    -ms-transform: rotateZ(0deg) scale(0);
+    -o-transform: rotateZ(0deg) scale(0);
+    transform: rotateZ(0deg) scale(0);
+}
+.btn01 .buttons .fa-search {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.btn01:hover .buttons .fa-link {
+    -webkit-transform: rotateZ(360deg) scale(1);
+    -moz-transform: rotateZ(360deg) scale(1);
+    -ms-transform: rotateZ(360deg) scale(1);
+    -o-transform: rotateZ(360deg) scale(1);
+    transform: rotateZ(360deg) scale(1);
+}
+.btn01:hover .buttons .fa-search {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.btn01:hover .ovrly {
+    opacity: 1;
+}
+.btn03 {
+     width: 282px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.btn03 img {
+    width: 282px;
+    height: 140px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.btn03 .ovrly {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn03 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.btn03 .buttons .fa {
+    background: rgb(256, 256, 256);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    color: rgba(50, 50, 50, 0.9);
+}
+.btn03 .buttons .fa-link {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.btn03 .buttons .fa-search {
+    -webkit-transform-origin: -65% 50%;
+    -moz-transform-origin: -65% 50%;
+    -ms-transform-origin: -65% 50%;
+    -o-transform-origin: -65% 50%;
+    transform-origin: -65% 50%;
+    -webkit-transform: rotateZ(0deg) scale(0);
+    -moz-transform: rotateZ(0deg) scale(0);
+    -ms-transform: rotateZ(0deg) scale(0);
+    -o-transform: rotateZ(0deg) scale(0);
+    transform: rotateZ(0deg) scale(0);
+}
+.btn03:hover .buttons .fa-link {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.btn03:hover .buttons .fa-search {
+    -webkit-transform: rotateZ(360deg) scale(1);
+    -moz-transform: rotateZ(360deg) scale(1);
+    -ms-transform: rotateZ(360deg) scale(1);
+    -o-transform: rotateZ(360deg) scale(1);
+    transform: rotateZ(360deg) scale(1);
+}
+.btn03:hover .ovrly {
+    opacity: 1;
+}
+.btn02 {
+    width: 282px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.btn02 img {
+    width: 282px;
+    height: 140px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.btn02 .ovrly {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn02 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.btn02 .buttons .fa {
+    background: rgb(256, 256, 256);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    color: rgba(50, 50, 50, 0.9);
+}
+.btn02 .buttons .fa-link {
+    -webkit-transform-origin: -190% 50%;
+    -moz-transform-origin: -190% 50%;
+    -ms-transform-origin: -190% 50%;
+    -o-transform-origin: -190% 50%;
+    transform-origin: -190% 50%;
+}
+.btn02 .buttons .fa-search {
+    -webkit-transform-origin: 300% 50%;
+    -moz-transform-origin: 300% 50%;
+    -ms-transform-origin: 300% 50%;
+    -o-transform-origin: 300% 50%;
+    transform-origin: 300% 50%;
+}
+.btn02:hover .buttons .fa {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+}
+.btn02:hover .ovrly {
+    opacity: 1;
+}
+.btn04 {
+    width: 282px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.btn04 img {
+    width: 282px;
+    height: 140px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.btn04 .ovrly {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn04 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.btn04 .buttons .fa {
+    background: rgb(256, 256, 256);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    color: rgba(50, 50, 50, 0.9);
+}
+.btn04 .buttons .fa-link {
+    -webkit-transform-origin: 50% -110%;
+    -moz-transform-origin: 50% -110%;
+    -ms-transform-origin: 50% -110%;
+    -o-transform-origin: 50% -110%;
+    transform-origin: 50% -110%;
+}
+.btn04 .buttons .fa-search {
+    -webkit-transform-origin: 50% 210%;
+    -moz-transform-origin: 50% 210%;
+    -ms-transform-origin: 50% 210%;
+    -o-transform-origin: 50% 210%;
+    transform-origin: 50% 210%;
+}
+.btn04:hover .buttons .fa {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+}
+.btn04:hover .ovrly {
+    opacity: 1;
+}
+.border-box{
+	width: 575px;
+	height: 180px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.border-box a:hover{
+	color: #FA8334;
+}
+.border-box1{
+	width: 282px;
+	float: left;
+	height: 180px;
+}
+.border-box2{
+	width: 282px;
+	height: 180px;
+	float: right;
+}
+.border-box h3{
+	height:36px; 
+	line-height:36px; 
+	overflow:hidden;
+	font-weight:normal;
+	color:#FA8334;
+}
+ul.newsli{
+	width: 575;
+	margin-top: 10px;
+}
+ul.newsli li{
+	width: 272px;
+	line-height: 26px;
+	float: left;
+	margin: 1%;
+}
+ul.newsli li a{
+	background: url(../images/newsli.png) no-repeat; 
+	display: block;
+	padding-left: 45px;
+}
+ul.newsli li a:hover{
+	color: #FA8334;
+	background: url(../images/newsli1.png) no-repeat;
+	display: block;
+	padding-left: 45px;
+}
+/*技术论坛样式部分*/
+#luntan{
+	width:1170px; 
+	margin:0 auto;
+}
+.luntan{
+	width:1170px;
+	height:380px; 
+	background:#FEC63F;
+}
+.luntan1{
+	width: 230px;
+	height: 380px;
+	float: left;
+}
+.luntan1 ul{
+	padding:30px 0;
+	 height:360px;
+}
+.luntan1 li{
+	line-height:60px; 
+	height:60px;
+	 text-align:center;
+}
+.luntan1 li a{
+	color:#fff;
+	 font-size:30px;
+}
+.luntan1 li a:hover{
+	opacity: 0.5;
+	color: red;
+}
+
+/*项目展示样式部分*/
+#xiangmu{
+	width:1170px; 
+	margin:0 auto;
+}
+.xiangmu{
+	width:1170px; 
+	height:1057px; 
+	background:#5BB2FC;
+}
+.xiangmu1{
+	width:1170px; 
+	height:353px; 
+	float:left;
+}
+.xiangmu2{
+	width:1170px; 
+	height:353px;
+	 float:left;
+	}
+.xiangmu3{
+	width:1170px;
+	 height:353px;
+	  float:left;
+	}
+
+.xiangmu1 .xiangmut, .xiangmu3 .xiangmut{
+	width:466px;
+	 height:353px; 
+	 float:left; 
+	 color:#fff; 
+	 text-align:center;
+}
+.xiangmu1 .xiangmup, .xiangmu3 .xiangmup{
+	width:684px;
+	 height:384px; 
+	 float:right;
+}
+.xiangmu2 .xiangmut{
+	width:466px; 
+	height:353px;
+	 float:right; 
+	 color:#fff;
+	  text-align:center;
+}
+.xiangmu2 .xiangmup{
+	width:684px; 
+	height:384px;
+	 float:left;
+}
+.xiangmu p{
+	line-height:24px;
+	 padding:0 25px;
+}
+.xiangmu .p1{
+	margin-top:60px;
+}
+.xiangmu .p2{
+	font-size:18px;
+	 color:#FEC63F; 
+	 line-height:66px;
+}
+.xiangmu .p2 a{
+	font-size:18px;
+	 color:#FEC63F;
+}
+
+/*企业合作部分样式*/
+#hezuo{
+	width:1170px;
+	 margin:0 auto;
+}
+.hezuo img{
+	float:left;
+}
+
+/*美观分隔线样式*/
+#mengxiang{
+	width:100%;
+	 height:150px;
+	  background:#F7BE68;
+}
+.mengxiang{
+	width:1170px; 
+	margin:0 auto; 
+	 color:#333333;
+}
+.mengxiang p{
+	text-align:center;
+}
+.mengxiang .p1{ 
+	font-size:32px; 
+	height:60px;
+	line-height:60px;
+	padding-top:30px;
+}
+.mengxiang .p2{
+	line-height:34px; 
+	font-size:16px;
+}
+.mengxiang .p3{
+	width:139px;
+	 height:54px; 
+	 margin-top:10px;
+	  margin-left:515px;
+}
+
+/*脚步样式代码*/
+#footer {
+	padding-top: 64px;
+	background:#2c2b33;
+}
+.footer{
+	width:1170px;
+	 margin:0 auto;
+}
+.footer .Top-List{
+	width: 1000px;
+	margin:0 auto;
+	padding-bottom:16px;
+}
+.footer .list-box{
+	float: left;
+	width: 25%;
+}
+.footer .last-box{
+	width: 25%;
+	float: left;
+}
+.footer .Top-List dt{
+	color:#fff;
+	font-size: 14px;
+	margin-bottom:22px;
+}
+.footer .Top-List dd{
+	line-height: 26px;
+}
+.footer a{
+	text-decoration: none;
+	font-size: 12px;
+	color:#717077;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.footer .callphone{
+	padding-top: 30px;
+}
+.footer .callphone .smalltit{
+	display: block;
+	width: 64px;
+	height: 18px;
+	background-color:#5c5c61;
+	color:#fff;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	margin-bottom:14px;
+}
+.footer .callphone p{
+	font-family: "Arial";
+	font-size: 22px;
+	color:#ed6d00;
+}
+.footer .Bot-List{
+	width: 100%;
+	padding:20px 0;
+	border-top:1px solid #3b3a41;
+}
+.footer .Bot-List .fl{
+	float: left;
+	width: 795px;
+	padding-top:28px;
+	text-align: left;
+}
+.footer .Bot-List .fr{
+	width: 340px;
+	float: left;
+}
+.footer .Bot-List .codeimg{
+	width: 84px;
+	margin-left: 26px;
+	color: #717077;
+	font-size: 12px;
+	text-align: center;
+	float: left;
+	line-height: 42px;
+	margin-top: 8px;
+}
+.codeimg img{
+	width: 84px;
+	height: 84px;
+}
+.footer .Bot-List dl{
+	margin-top:1em;
+}
+.footer .Bot-List dt{
+	display: inline-block;
+	font-size: 12px;
+	color:#717077;
+}
+.footer .Bot-List dd{
+	display: inline-block;
+	height: 14px;
+	line-height: 10px;
+	padding: 0 .6em;
+	border-right: 1px solid #717077;
+	*display: inline;
+	*border: 0;
+	*height: auto;
+	*line-height: 20px;
+}
+
+.copy-right{
+	width:100%;
+	background: #060607;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	font-size: 12px;
+	color:#717077;
+}
+.copy-right span{
+	color:#ed6d00;
+}
