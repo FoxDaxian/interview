@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="digou-css.css">
+	<script src="jquery-2.2.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		//当滚动条发生滚动的时候，触发函数
+		$(window).scroll(function(){
+			//获取滚动条距离顶部的距离
+			var top = $(document).scrollTop();
+			//获取菜单，以节约内存
+			var menu = $("#menu")
+			//获取所有的item (注,使用ID来获取比其他所有获取方式来的快)
+			var items = $("#content").find(".item");
+
+			var currentId = "";//获取所在楼层(item)id 
+			items.each(function(){
+				//将this锁定 可以给m前加$  这样可以区别m是JQ的变量
+				var m = $(this);
+				var itemTop = m.offset().top;
+				if(top > itemTop-200){
+					currentId = "#"+m.attr("id");
+				}else{
+					//这个else为了直接跳出 if 判断，节省判断时间  
+					return false;
+				}
+			});
+			
+			//给相应楼层设置css 设置currentId  取消其他a的 id css
+			var currentLink = menu.find(".current")
+			if(currentId && currentLink.attr("href") != currentId){
+				currentLink.removeClass("current");
+				menu.find("a[href='" + currentId + "']").addClass("current");
+
+			}
+	
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="menu">
+			<ul>
+				<li><a href="#item1" class="current">1F 男装</a></li>
+				<li><a href="#item2">2F 女装</a></li>
+				<li><a href="#item3">3F 幼儿</a></li>
+				<li><a href="#item4">4F 游戏</a></li>
+				<li><a href="#item5">5F 玩具</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h1>购物网</h1>
+			<div id="item1" class="item">
+				<h2>1F 男装</h2>
+				<ul>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img1.jpg" alt="图片"></a></li>
+				</ul>
+			</div>
+			<div id="item2" class="item">
+				<h2>2F 女装</h2>
+				<ul>
+					<li><a href="#"><img src="../css-img/img2.jpg" ></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" ></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" ></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img2.jpg" alt="图片"></a></li>
+				</ul>
+			</div>
+			<div id="item3" class="item">
+				<h2>3F 幼儿</h2>
+				<ul>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img3.jpg" alt="图片"></a></li>
+				</ul>
+			</div>
+			<div id="item4" class="item">
+				<h2>4F 游戏</h2>
+				<ul>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img4.jpg" alt="图片"></a></li>
+				</ul>
+			</div>
+			<div id="item5" class="item">
+				<h2>5F 玩具</h2>
+				<ul>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+					<li><a href="#"><img src="../css-img/img5.jpg" alt="图片"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

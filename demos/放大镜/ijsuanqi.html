@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#wrap{
+		height: 200px;
+		width: 200px;
+		margin: 100px auto 0;
+		position: relative;
+	}
+	#wrap img{
+
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	#wrap:hover{
+		cursor: none;
+	}
+	#inner{
+		
+		z-index: 200;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 50px;
+		width: 50px;
+		/*background-color: rgba(150,100,100,0.5);*/
+		background:url(5316b83ee1f19.png) no-repeat;
+		visibility:hidden;
+		background-size: 100% 100%;
+	}
+	#bigimg{
+		overflow: hidden;
+		height: 300px;
+		width: 300px;
+		margin:20px auto 0;
+		border:1px solid red;
+		position: relative;
+		visibility: hidden;
+	}
+	#bigimg img{
+		position: absolute;
+		height: 300%;
+		width: 300%;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<img src="img17.jpg" alt="">
+		<div id="inner"></div>
+	</div>
+	<div id="bigimg">
+		<img src="img17.jpg" alt="" id="bImg">
+	</div>
+	<script>
+	window.onload = function(){
+		var inner = getid("inner");
+		var wrap = getid("wrap");
+		var bImg = getid("bImg");
+		var bigimg = getid("bigimg");
+		var x,y,onoff = 2;
+		wrap.onmouseover = function(e){
+			onoff = 1;
+			inner.style.visibility = "visible";
+		
+		}
+		inner.onmouseover = function(){
+			// alert(wrap.offsetHeight)
+			onoff = 1;
+			bigimg.style.visibility = "visible";
+			
+		}
+		wrap.onmousemove = function(e){
+			if(onoff == 1){
+				inner.style.left = e.clientX-parseInt(wrap.offsetLeft)-parseInt(getComputedStyle(inner).width)/2+"px";
+				inner.style.top = e.clientY-parseInt(wrap.offsetTop)-parseInt(getComputedStyle(inner).height)/2+"px";
+				if(parseInt(inner.style.left) <= 0){
+					inner.style.left = 0+"px";
+				}
+				if(parseInt(inner.style.top) <= 0){
+					inner.style.top = 0+"px";
+				}
+				if(parseInt(inner.style.top) > parseInt(wrap.offsetHeight)-parseInt(getComputedStyle(inner).height)){
+					inner.style.top = parseInt(wrap.offsetHeight)-parseInt(getComputedStyle(inner).height)+"px";
+				}
+				if(parseInt(inner.style.left) > parseInt(wrap.offsetWidth)-parseInt(getComputedStyle(inner).width)){
+					inner.style.left = parseInt(wrap.offsetWidth)-parseInt(getComputedStyle(inner).width)+"px";
+				}
+				x = inner.style.left;
+				y = inner.style.top;
+				// console.log(x);
+				// console.log(y);
+
+				bImg.style.left= -parseInt(x)*4+"px";
+				bImg.style.top= -parseInt(y)*4+"px";
+			}
+		}
+		document.onmouseout = function(){
+			onoff = 2;
+			bigimg.style.visibility = "hidden";
+			inner.style.visibility = "hidden";
+		}
+	}
+	function getid(id){
+		return document.getElementById(id);
+	}
+	
+	</script>
+</body>
+</html>

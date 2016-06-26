@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  #wrap{
+
+    height: 400px;
+    width: 600px;
+    margin: 100px auto;
+    -webkit-perspective:800px; /* 景深 */
+    position: relative;
+  }
+  #box{
+    height: 350px;
+    width: 500px;
+    margin: 25px auto;
+    /*border: 1px solid black;*/
+    -webkit-transform-style:preserve-3d;/* 设置3d */
+    transition:1s;
+    
+  }
+  .son1{
+    /*-webkit-backface-visibility:hidden;*/
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    left:200px;
+    top:125px;
+    border:1px solid black;
+   
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .son1:nth-child(1){
+    -webkit-transform: rotateY(0deg) translateZ(274.7px);/* 利用tan来获取长度 */
+  }
+  .son1:nth-child(2){
+    -webkit-transform: rotateY(40deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(3){
+    -webkit-transform: rotateY(80deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(4){
+    -webkit-transform: rotateY(120deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(5){
+    -webkit-transform: rotateY(160deg) translateZ(274.7px);
+  }
+  .son1:nth-child(6){
+    -webkit-transform: rotateY(200deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(7){
+    -webkit-transform: rotateY(240deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(8){
+    -webkit-transform: rotateY(280deg)  translateZ(274.7px);
+  }
+  .son1:nth-child(9){
+    -webkit-transform: rotateY(320deg)  translateZ(274.7px);
+  }
+  /*#wrap:hover #box{
+    transform:rotateY(180deg);
+  }*/
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="box">
+      <div class="son1"><a href="http://www.baidu.com"><img src="css-img/img1.jpg" alt=""></a></div>
+      <div class="son1"><img src="css-img/img2.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img3.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img4.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img5.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img6.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img7.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img8.jpg" alt=""></div>
+      <div class="son1"><img src="css-img/img9.jpg" alt=""></div>
+    </div>
+  </div>
+  <script>
+  // alert(100/(Math.tan(20*Math.PI/180)));
+    var oWrap = document.getElementById("wrap");
+    var box = document.getElementById("box");
+    var img = document.getElementsByTagName("img");
+    var a = 1;
+    oWrap.onclick  = function(){
+      
+      box.style.transform = "rotateY("+(40*a)+"deg) rotateZ("+(360*a)+"deg)";
+
+      a++;
+    }
+    for(var i = 0; i < img.length; i++){
+      img[i].onclick = function(e){
+          e.stopPropagation();
+      }
+      img[i].onmouseover = function(){
+        this.style.border = "1px solid red";
+      }
+      img[i].onmouseout = function(){
+        this.style.border = "none";
+      }
+    }
+  
+  </script>
+</body>
+</html>
